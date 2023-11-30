@@ -28,6 +28,7 @@ header.headerr{
 }
 
 .w3-row-padding .w3-half .caption {
+	margin-left: 60px;
 	justify-content: center;
 	
 }
