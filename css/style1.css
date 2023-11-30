@@ -27,6 +27,10 @@ header.headerr{
 	justify-content: center;
 }
 
+.w3-row-padding .w3-half .caption {
+	justify-content: center;
+	
+}
 
 .slides {
 	width:400%;
