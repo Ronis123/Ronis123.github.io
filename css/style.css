@@ -1,0 +1,51 @@
+/* Estilos básicos do carrossel */
+.galery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.galery .fotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.galery .fotos img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+/* Exibe a primeira imagem ao carregar */
+.galery .fotos img:first-child {
+    display: block;
+}
+
+/* Media query para ajustar o layout em telas grandes*/
+@media (min-width: 640px) {
+    .galery .fotos .small-justify {
+        width: 90%; /* Ajuste conforme necessário */
+        height: 85vh;
+        margin: 0 auto;
+    }
+}
+/* Media query para ajustar o layout em telas menores */
+@media (max-width: 639px) {
+    .galery .fotos {
+        height: 50vh; /* Ajusta a altura para 50% da altura da tela em dispositivos menores */
+    }
+
+    .galery .fotos img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
