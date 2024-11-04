@@ -14,8 +14,8 @@ function showNextImage() {
     currentImageIndex = (currentImageIndex + 1) % totalImages;
 }
 
-// Inicia o carrossel automaticamente a cada 3 segundos
-setInterval(showNextImage, 3000);
+// Inicia o carrossel automaticamente a cada 2 segundos
+setInterval(showNextImage, 2000);
 
 // Exibe a primeira imagem ao carregar a página
 document.addEventListener("DOMContentLoaded", function() {
