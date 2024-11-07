@@ -15,3 +15,4 @@ a:hover { opacity: 0.6; }*/
 .main { display: flex; align-items: center; justify-content: center; }
 .footer address { font-weight: 300; overflow: auto; }
 .footer address a { font-weight: 400; color: white; }
+.w3-half .caption {text-align: center;}
