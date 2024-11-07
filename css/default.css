@@ -10,7 +10,7 @@ a { text-decoration: none; transition: 0.5s; }
 a:hover { opacity: 0.6; }*/
 
 .container {width: 80%; height: 100%; display: grid; grid-template-rows: 50px auto 50px; background: linear-gradient(72deg, #3DEBB0 1%, #8956F3 99%)}
-.header, .footer { display: flex; align-items: center; justify-content: center; background-color: blueviolet; }
+.header, .footer { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; margin-top:20px; background-color: blueviolet; }
 .header h1, footer address { color: whitesmoke; }
 .main { display: flex; align-items: center; justify-content: center; }
 .footer address { font-weight: 300; overflow: auto; }
