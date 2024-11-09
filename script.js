@@ -3,24 +3,24 @@ const images = document.querySelectorAll(".galery .fotos img");
 const totalImages = images.length;
 
 // Function to hide all images 
-function hideAllImages() {
+function hideAllImagesCarousel1() {
     images.forEach(img => img.style.display = "none");
 }
 
 // Function to show the next image
-function showNextImage() {
-    hideAllImages();
+function showNextImageCarousel1() {
+    hideAllImagesCarousel1();
     images[currentImageIndex].style.display = "block";
     currentImageIndex = (currentImageIndex + 1) % totalImages;
 }
 
 // Starting the Carousel automatically in two second
-setInterval(showNextImage, 2000);
+setInterval(showNextImageCarousel1, 2000);
 
 // Display the first image to load the page
 document.addEventListener("DOMContentLoaded", function() {
-    hideAllImages();
-    showNextImage();
+    hideAllImagesCarousel1();
+    showNextImageCarousel1();
 });
 
 // Starting the Carousel 2
