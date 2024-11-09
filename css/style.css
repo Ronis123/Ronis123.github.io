@@ -1,4 +1,4 @@
-/* Estilos básicos do carrossel */
+/* Estilos básicos do carrossel 1 */
 .galery {
     display: flex;
     justify-content: center;
@@ -49,3 +49,93 @@
         max-height: 100%;
     }
 }
+
+/* Estilo básico do carrossel 2*/
+
+.galery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.galery .fotos-novas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.galery .fotos-novas img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+/* Exibe a primeira imagem ao carregar */
+.galery .fotos-novas img:first-child {
+    display: block;
+}
+
+/* Estilo das setas */
+button.prev, button.next {
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo semitransparente branco */
+    color: black; /* Cor do texto preto para se destacar */
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Seta para a esquerda */
+button.prev {
+    left: 10px;
+}
+
+/* Seta para a direita */
+button.next {
+    right: 10px;
+}
+
+/* Efeito de hover nas setas */
+button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Aumenta a opacidade ao passar o mouse */
+}
+
+/* Estilos das imagens para garantir que fiquem centralizadas */
+.galery img, .fotos-novas img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media query para ajustar o layout em telas grandes*/
+@media (min-width: 640px) {
+    .galery .fotos-novas #primeira-imagem {
+        width: 90%; /* Ajuste conforme necessário */
+        height: 85vh;
+        margin: 0 auto;
+    }
+}
+/* Media query para ajustar o layout em telas menores */
+@media (max-width: 639px) {
+    .galery .fotos-novas {
+        height: 50vh; /* Ajusta a altura para 50% da altura da tela em dispositivos menores */
+    }
+
+    .galery .fotos-novas img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
