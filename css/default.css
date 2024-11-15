@@ -6,4 +6,7 @@
 .footer address { font-weight: 300; overflow: auto; }
 .footer address a { font-weight: 400; color: white; }
 .w3-half .caption {text-align: center;}
+/*setting videos*/
 .w3-half .videos{margin-top: 20px; margin-bottom: 20px;}
+/*slides*/
+.w3-half .professional-slide{magin-top: 20px; magin-bottom: 20px;}
