@@ -1,4 +1,4 @@
-// Begging the carousel 1
+// Beggining the carousel 1
 
 let currentImageIndex = 0;
 const images = document.querySelectorAll(".fotos .carousel");
