@@ -1,56 +1,65 @@
-/* Estilos básicos do carrossel 1 */
-.galery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-}
+/*Basic style of carousel 1*/
 
-.galery .fotos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Style to container of galery */
+.adapted-galery {
     position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+/* Style to each image of carousel*/
+.carousel{
+    display: none;
     width: 100%;
-    max-width: 100%;
     height: auto;
 }
 
-.galery .fotos img {
-    max-width: 100%;
-    max-height: 100%;
-    display: none;
-    object-fit: contain; /* Mantém a proporção da imagem */
+/* Styling to container of ball*/
+.dots-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 10;
 }
 
-/* Exibe a primeira imagem ao carregar */
-.galery .fotos img:first-child {
-    display: block;
+/* Style to navigation balls */
+.dot {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    background-color: rgb(108, 152, 235, 0.4);
+    border: 2px solid rgb(226, 231, 236); 
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-/* Media query para ajustar o layout em telas grandes*/
-@media (min-width: 640px) {
-    .galery .fotos .small-justify {
-        width: 90%; /* Ajuste conforme necessário */
-        height: 85vh;
-        margin: 0 auto;
-    }
+/* Style of active ball*/
+.dot.active {
+    background-color: #333;
 }
-/* Media query para ajustar o layout em telas menores */
+/*Hover efect os balls*/
+.dot:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Media query to justify  the layout in litle screan */
 @media (max-width: 639px) {
-    .galery .fotos {
-        height: 50vh; /* Ajusta a altura para 50% da altura da tela em dispositivos menores */
-    }
-
-    .galery .fotos img {
-        max-width: 100%;
-        max-height: 100%;
+    .adapted-galery{
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 5px;
     }
 }
 
-/* Estilo básico do carrossel 2*/
+
+/* Basic style to carousel 2*/
 
 .galery {
     display: flex;
@@ -75,18 +84,18 @@
     max-width: 100%;
     max-height: 100%;
     display: none;
-    object-fit: contain; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Maintains image aspect ratio */
 }
 
-/* Exibe a primeira imagem ao carregar */
+/* Display the first image when loading*/
 .galery .fotos-novas img:first-child {
     display: block;
 }
 
-/* Estilo das setas */
+/* Style of arrows */
 button.prev, button.next {
-    background-color: rgba(255, 255, 255, 0.5); /* Fundo semitransparente branco */
-    color: black; /* Cor do texto preto para se destacar */
+    background-color: rgba(255, 255, 255, 0.5); /* White semi-transparent background */
+    color: black; /* Black text color to stand out */
     border: none;
     padding: 10px;
     font-size: 24px;
@@ -97,40 +106,40 @@ button.prev, button.next {
     z-index: 1;
 }
 
-/* Seta para a esquerda */
+/* Arrow to left side */
 button.prev {
     left: 10px;
 }
 
-/* Seta para a direita */
+/* Arrow to right side*/
 button.next {
     right: 10px;
 }
 
-/* Efeito de hover nas setas */
+/* Hover efect to arrows*/
 button:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Aumenta a opacidade ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.8); /* Increases opacity on mouse */
 }
 
-/* Estilos das imagens para garantir que fiquem centralizadas */
+/* Style images to ensure they are centered */
 .galery img, .fotos-novas img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Media query para ajustar o layout em telas grandes*/
+/* Media query to adjust layout on large screens*/
 @media (min-width: 640px) {
     .galery .fotos-novas #primeira-imagem {
-        width: 90%; /* Ajuste conforme necessário */
+        width: 90%; /* Adjust as needed */
         height: 85vh;
         margin: 0 auto;
     }
 }
-/* Media query para ajustar o layout em telas menores */
+/* Media query to adjust the layout on smaller screens */
 @media (max-width: 639px) {
     .galery .fotos-novas {
-        height: 50vh; /* Ajusta a altura para 50% da altura da tela em dispositivos menores */
+        height: 50vh; /* Adjusts height to 50% of screen height on smaller devices */
     }
 
     .galery .fotos-novas img {
@@ -138,4 +147,3 @@ button:hover {
         max-height: 100%;
     }
 }
-
