@@ -1,26 +1,47 @@
+// Begging the carousel 1
+
 let currentImageIndex = 0;
-const images = document.querySelectorAll(".galery .fotos img");
+const images = document.querySelectorAll(".fotos .carousel");
+const dotsNew = document.querySelectorAll(".dots-container .dot");
 const totalImages = images.length;
 
-// Function to hide all images 
-function hideAllImagesCarousel1() {
+// Function to hide all images and remove the class "active the balls.
+function hideAllImagesNew() {
     images.forEach(img => img.style.display = "none");
+    dotsNew.forEach(dot => dot.classList.remove("active"));
 }
 
-// Function to show the next image
-function showNextImageCarousel1() {
-    hideAllImagesCarousel1();
-    images[currentImageIndex].style.display = "block";
+// Function the show the atual image and active the correspondent ball.
+function showImageNew(index) {
+    hideAllImagesNew();
+    images[index].style.display = "block";
+    dotsNew[index].classList.add("active");
+}
+
+// Function to show the next image.
+function nextImageNew() {
     currentImageIndex = (currentImageIndex + 1) % totalImages;
+    showImageNew(currentImageIndex);
 }
 
-// Starting the Carousel automatically in two second
-setInterval(showNextImageCarousel1, 2000);
+// Function to show the old image.
+function prevImageNew() {
+    currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+    showImageNew(currentImageIndex);
+}
 
-// Display the first image to load the page
+// Function to show especific image when clink in ball.
+function currentImage(index) {
+    currentImageIndex = index;
+    showImageNew(currentImageIndex);
+}
+
+// Starting the carousel automatically the each 2 second.
+setInterval(nextImageNew, 2000);
+
+// Display the first image to load page.
 document.addEventListener("DOMContentLoaded", function() {
-    hideAllImagesCarousel1();
-    showNextImageCarousel1();
+    showImage(currentImageIndex);
 });
 
 // Starting the Carousel 2
@@ -34,7 +55,7 @@ function hideAllImages() {
 
 }
 
-// Function to image atual show 
+// Function to atual image show 
 function showImage(index) {
     hideAllImages();
     imagesNew[index].style.display = "block";
@@ -59,4 +80,3 @@ setInterval(nextImage, 2000);
 document.addEventListener("DOMContentLoaded", function() {
     showImage(currentImageIndexNew);
 });
-
