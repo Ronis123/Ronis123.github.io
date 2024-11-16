@@ -149,7 +149,7 @@ button:hover {
 }
 
 /* CONTAINER OF VIDEOs AND SLIDES "Editing to adjust the layout on smaller screen"*/
-@media (min-width: 400px) {
+@media (min-width: 380px) {
     .w3-half .videos {
         width: 90%; /* Adjust as needed */
         height: 85vh;
