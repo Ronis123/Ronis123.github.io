@@ -148,20 +148,29 @@ button:hover {
     }
 }
 
-/* CONTAINER OF VIDEOs AND SLIDES "Editing to adjust the layout on smaller screen"*/
-@media (min-width: 380px) {
+/* CONTAINER OF VIDEO AND SLIDES "Editing to adjust the layout on smaller screen"*/
+
+@media (max-width: 380px) {
     .w3-half .videos {
-        width: 90%; /* Adjust as needed */
-        height: 85vh;
+        width: 100%; /* Adjust as needed */
+        height: 100%;
         margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 20px;
     }
     .w3-half .professional-slide {
-        width: 90%; /* Adjust as needed */
-        height: 85vh;
+        width: 100%; /* Adjust as needed */
+        height: 100%;
         margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+}
+
+/*CONTAINER OF READER/HOME layout on smaller screen of picture*/
+@media (max-width: 380px){
+    #home .w3-circle {
+        width: 100%; /* Adjust as needed */
+        height: 100%;
     }
 }
