@@ -6,6 +6,8 @@
 .footer address { font-weight: 300; overflow: auto; }
 .footer address a { font-weight: 400; color: white; }
 .w3-half .caption {text-align: center;}
+#home .I-am { font-size: 25px; padding: 20px; font-weight: bold;}
+
 /*setting videos*/
 .w3-half .videos{margin-top: 20px; margin-bottom: 20px;}
 /*slides*/
