@@ -1,2 +1,2 @@
 Only Portfolio 
-Thanks you!!!
+Thank you!!!
